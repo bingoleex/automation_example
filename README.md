@@ -1,2 +1,2 @@
 # automation_example
-Just a record the growth of study test tools
+Just a record for the growth of study test tools.
