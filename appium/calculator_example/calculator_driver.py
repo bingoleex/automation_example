@@ -8,7 +8,7 @@ class CalculatorDriver(object):
 		# get configuration and app resource
 		with open('resource.json','r',encoding='utf8') as f:
 			self.elements = json.load(f)
-				#config test 
+		#config
 		desired_caps = {}
 		desired_caps['platformName'] = self.elements['platform_name']
 		desired_caps['platformVersion'] = self.elements['platform_version']
