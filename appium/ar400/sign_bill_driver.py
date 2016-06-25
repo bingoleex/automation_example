@@ -25,6 +25,8 @@ class SignBillDriver(Ar400Driver):
 	def confirm_bill(self):
 		return self.click(self.sign_bill_elements['confirm_btn'])
 
+	def open_keyboard(self,)
+
 	def click(self, reource_id):
 		return self.driver.find_element_by_id(resource_id).click()
 		

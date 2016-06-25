@@ -22,59 +22,19 @@ class Ar400Driver(ArDriver):
 			# print driver
 			# print elements
 
-		def click_zero(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_0_btn_resource_id'])
-				times -= 1
+		def click_single_number(self,index=0):
+			try:
+				x = int(index)
+			except ValueError:
+				x = 0
+			self.click(self.elements['digit'][x])
 
-		def click_one(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_1_btn_resource_id'])
-				times -= 1
-
-		def click_two(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_2_btn_resource_id'])
-				times -= 1
-
-		def click_three(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_3_btn_resource_id'])
-				times -= 1
-
-		def click_four(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_4_btn_resource_id'])
-				times -= 1
-
-		def click_five(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_5_btn_resource_id'])
-				times -= 1
-
-		def click_six(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_6_btn_resource_id'])
-				times -= 1
-
-		def click_seven(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_7_btn_resource_id'])
-				times -= 1
-
-		def click_eight(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_8_btn_resource_id'])
-				times -= 1
-
-		def click_nine(self, times=1):
-			while times >=1:
-				self.click(self.elements['digit_9_btn_resource_id'])
-				times -= 1
+		def click_multiple_number(self, numbers):
+			for index in numbers:
+				self.click_single_number(x)
 
 		def finish_type_number(self):
 			return self.click(self.bill_elements['confirm_btn'])
-
 
 		def previous_number(self):
 			return self.click(self.bill_elements['left_btn'])
@@ -84,3 +44,5 @@ class Ar400Driver(ArDriver):
 
 		def click(self, reource_id):
 			return self.driver.find_element_by_id(resource_id).click()
+
+a = Ar400Driver()
