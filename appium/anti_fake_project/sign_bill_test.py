@@ -1,5 +1,4 @@
 import unittest
-from calculator_driver import CalculatorDriver
 
 class CalculatorTest(unittest.TestCase):
 

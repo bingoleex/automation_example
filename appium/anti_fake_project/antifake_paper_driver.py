@@ -2,7 +2,7 @@ from ar_driver import ArDriver
 import json
 import time
 
-class Ar400Driver(ArDriver):
+class AntiFakePaperDriver(ArDriver):
 	"""docstring for Ar400Driver"""
 	def __init__(self):
 		with open("ar400_resource.json") as f:

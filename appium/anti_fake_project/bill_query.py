@@ -1,16 +1,18 @@
-from ar400_driver import Ar400Driver
+from antifake_paper_driver import AntiFakePaperDriver
+import time
 
-class BillQueryDriver(Ar400Driver):
+class BillQueryDriver(AntiFakePaperDriver):
 
 	def __init__(self, driver):
 		#load element resource
 		super(BillQueryDriver, self).__init__()
 
 		self.driver = driver
-		self.bill_query_keyboard = Ar400Driver.KeybordDriver(self.bill_query_elements, self.driver)
+		self.bill_query_keyboard = AntiFakePaperDriver.KeybordDriver(self.bill_query_elements, self.driver)
 
 	def next(self):
-		return self.click(self.bill_query_elements['next_btn'])
+		self.click(self.bill_query_elements['next_btn'])
+		time.sleep(int(self.sign_bill_elements['sign_time']))
 
 	def select_bill_type(self):
 		return self.click(self.bill_query_elements['drop_list'])
@@ -31,7 +33,8 @@ class BillQueryDriver(Ar400Driver):
 		return self.click(self.bill_query_elements['contiune_sign'])	
 
 	def bill_query(self):
-		
+		self.next()
+		self.
 
 
 # a = BillQueryDriver()

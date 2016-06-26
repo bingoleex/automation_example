@@ -1,13 +1,13 @@
-from ar400_driver import Ar400Driver
+from antifake_paper_driver import AntiFakePaperDriver
 import time
 
-class SignBillDriver(Ar400Driver):
+class SignBillDriver(AntiFakePaperDriver):
 	"""docstring for SignBillDriver"""
 	def __init__(self,driver):
 		super(SignBillDriver, self).__init__()
 
 		self.driver = driver
-		self.sign_bill_keyboard = Ar400Driver.KeybordDriver(self.sign_bill_elements, self.driver)
+		self.sign_bill_keyboard = AntiFakePaperDriver.KeybordDriver(self.sign_bill_elements, self.driver)
 
 	def sign(self):
 		self.click(self.sign_bill_elements['sign_btn'])
@@ -25,7 +25,12 @@ class SignBillDriver(Ar400Driver):
 	def confirm_bill(self):
 		return self.click(self.sign_bill_elements['confirm_btn'])
 
-	def open_keyboard(self,)
+	def open_keyboard(self, index)：
+		try:
+			x = int(index)
+		except:
+			x = 0
+		return self.driver.tap()
 
 	def click(self, reource_id):
 		return self.driver.find_element_by_id(resource_id).click()
