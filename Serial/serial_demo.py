@@ -22,7 +22,6 @@ with serial.Serial(port,baudrate,timeout=0) as ser:
 		    continue
 		while True:
 		    n = ser.inWaiting()
-		    print n
 		    if n > 0:
 		        data = "%s%s" % (data, ser.read(n))
 		        print toVisualHex(data)
