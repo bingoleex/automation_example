@@ -24,7 +24,6 @@ with serial.Serial(port,baudrate,timeout=0) as ser:
 		    n = ser.inWaiting()
 		    if n > 0:
 		        data = "%s%s" % (data, ser.read(n))
-		        print toVisualHex(data)
 		        sleep(0.02) # data is this interval will be merged
 		    else:
 		        quit = True
