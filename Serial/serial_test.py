@@ -43,7 +43,7 @@ class DelayTest(unittest.TestCase):
 				data = json.load(f)
 			for cmd in data['commands']:
 				print(cmd)
-
+				print("ok")
 	def tearDown(self):
 		self.serial.close()
 
