@@ -1,0 +1,22 @@
+{
+	"TRACK_TRACE_PAGE":{
+		"TAB_TEXT":"//*[@id=\"function\"]/div/div[1]/div/div[1]/ul[1]",
+		"TEXT_FIELD":"//*[@id=\"function\"]/div/div[1]/div/div[1]/ul[2]/li[1]/div[1]/div",
+		"SEARCH_BUTTON":"//*[@id=\"queryBillHK\"]",
+		"BY_REF_TAB":"//*[@id=\"function\"]/div/div[1]/div/div[1]/ul[1]/li[3]/a"
+	},
+	"TRANSMIT_TIME_PAGE":{
+		"TAB_TITLE":"//*[@id=\"function\"]/div/div[1]/h5",
+		"PROMOTION_LINK":"//*[@id=\"function\"]/div/div[1]/div[1]/a",
+		"FORM_DATA":"//*[@id=\"function\"]/div/div[1]",
+		"SEARCH_BUTTON":"//*[@id=\"queryPrice\"]"
+	},
+	"TAX_QUERY_PAGE":{
+		"BILL_NUMBER_INPUT":"//*[@id=\"function\"]/div/div[1]/form/div[1]",
+		"VERIFY_CODE_INPUT":"//*[@id=\"function\"]/div/div[1]/form/div[2]",
+		"SEARCH_BTN":"//*[@id=\"function\"]/div/div[1]/form/div[2]"
+	},
+	"IMPORT_EXPORT_PAGE":{
+		"DIV_XPATH":"//*[@id=\"function\"]/div/div[1]/div"
+	}
+}
